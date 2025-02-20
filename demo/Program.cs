@@ -81,7 +81,11 @@ namespace demo
             #region One To One Relationship
             //Department department = new Department();
             #endregion
-          
+            #region One To Many Relationship
+            Employee employee = new Employee(); 
+            Department department = new Department();
+            //employee.WorkFor.DeptName
+            #endregion
         }
     }
 

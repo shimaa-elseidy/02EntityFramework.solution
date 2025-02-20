@@ -13,8 +13,10 @@ namespace demo.Entity
         public string DeptName { get; set; }
         public string Description { get; set; }
         [ForeignKey(nameof(Department.Maneger))]
-        public int EmpId    { get; set; }
-       public Employee Maneger { get; set; } // navigational property
-        
+        public int EmpId { get; set; }
+        public Employee Maneger { get; set; } // navigational property
+
+        public List<Employee>  Employees { get; set; } // navigational property
+
     }
 }

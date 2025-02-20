@@ -20,7 +20,8 @@ namespace demo.Contexts
             modelBuilder.ApplyConfiguration(new EmployeeConfiguration());
             modelBuilder.ApplyConfiguration(new DepartmentConfiguraton());
             // modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
-           // modelBuilder.Entity<Employee>().HasOne(e => e.Department).WithOne(d => d.Maneger).HasForeignKey<Department>(d=>d.EmpId);
+            modelBuilder.Entity<Employee>().HasOne(e => e.Department).WithOne(d => d.Maneger).HasForeignKey<Department>(d=>d.EmpId);
+            modelBuilder.Entity<Department>().HasMany(d => d.Employees).WithOne(e => e.WorkFor).HasForeignKey(d=>d.WorkForId);
             base.OnModelCreating(modelBuilder);
         }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)

@@ -15,8 +15,12 @@ namespace demo.Entity
         public int Age { get; set; }
         public double? Salary { get; set; }
         public string Address { get; set; }
-        [InverseProperty(nameof(Department.Maneger))]
+        //[InverseProperty(nameof(Department.Maneger))]
         public Department? Department { get; set; } // navigational property
+
+        public int? WorkForId { get; set; }
+        //[InverseProperty(nameof(Department.Employees))]
+        public Department? WorkFor { get; set; }
        
     }
 }
