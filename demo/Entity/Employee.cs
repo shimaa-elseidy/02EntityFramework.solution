@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -14,5 +15,8 @@ namespace demo.Entity
         public int Age { get; set; }
         public double? Salary { get; set; }
         public string Address { get; set; }
+        [InverseProperty(nameof(Department.Maneger))]
+        public Department? Department { get; set; } // navigational property
+       
     }
 }

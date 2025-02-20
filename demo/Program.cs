@@ -56,6 +56,32 @@ namespace demo
             //appDpContext.Entry(employee).State=EntityState.Added;
             //appDpContext.SaveChanges();
             #endregion
+            #region CRUD Operations (Retreive)
+            // CRUD :: read - select
+            //var output = appDpContext.employees.FirstOrDefault();
+            ////Console.WriteLine(output ?? null  );
+            //Console.WriteLine(appDpContext.Entry(output).State); // Unchanged
+            //output.Name = "omar";
+            //appDpContext.SaveChanges();
+            //Console.WriteLine(appDpContext.Entry(output).State); // Modified
+            #endregion
+            #region CRUD Operations (Update)
+            //var output = appDpContext.employees.FirstOrDefault(x => x.Id == 80 );
+            ////Console.WriteLine(appDpContext.Entry(output).State); // Unchanged
+            //output.Name = "meshmesha";
+            ////Console.WriteLine(appDpContext.Entry(output).State); // Modified
+            ////appDpContext.Update(output);
+            //appDpContext.SaveChanges(); 
+            #endregion
+            #region CRUD Operations (Delete)
+            //var output = appDpContext.employees.FirstOrDefault(e => e.Id == 80);
+            //appDpContext.employees.Remove(output);
+            //appDpContext.SaveChanges();
+            #endregion
+            #region One To One Relationship
+            //Department department = new Department();
+            #endregion
+          
         }
     }
 

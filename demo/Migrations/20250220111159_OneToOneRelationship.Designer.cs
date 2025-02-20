@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using demo.Contexts;
 
@@ -10,9 +11,11 @@ using demo.Contexts;
 namespace demo.Migrations
 {
     [DbContext(typeof(AppDpContext))]
-    partial class AppDpContextModelSnapshot : ModelSnapshot
+    [Migration("20250220111159_OneToOneRelationship")]
+    partial class OneToOneRelationship
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
